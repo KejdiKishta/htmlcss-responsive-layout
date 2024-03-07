@@ -21,11 +21,13 @@ ul {
 
 :root{
     --header-height: 80px;
+    --padding-hero-card: 40px;
 }
 
 /* Utilities */
 
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
@@ -36,6 +38,14 @@ ul {
 
 .c-w{
     color: white;
+}
+
+.radius{
+    border-radius: 30px;
+}
+
+.t-align-center {
+    text-align: center;
 }
 
 /* !HEADER */
@@ -52,7 +62,6 @@ header .container {
     justify-content: space-between;
     height: var(--header-height);
     line-height: var(--header-height);
-    padding: 0 20px;
 }
 
 .logo {
@@ -66,12 +75,91 @@ header .container {
 .nav-bar ul {
     gap: 15px;
 }
-/* *FOOTER MEDIA QUERY */
+
+/* FOOTER MEDIA QUERY */
+
 @media screen and (min-width: 992px) {
-    .hamburger-menu{
+    .hamburger-menu {
         display: none;
     }
-    .nav-bar{
+    .nav-bar {
         display: block;
+    }
+}
+
+/* !MAIN */
+
+/* *HERO-SECTION */
+
+.hero-section {
+    padding: calc(var(--header-height) + 30px)  0;
+}
+
+.hero-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: var(--padding-hero-card);
+    background-color: rgb(181 221 255);
+}
+
+.hero-card h2 {
+
+    /* debug */
+    height: 30px;
+    background-color: red;
+}
+
+.hero-card p {
+    padding: 30px 0;
+}
+
+.blue-btn{
+    display: inline-block;
+    background-color: rgb(0 132 253);
+    
+    /* debug */
+    width: 80%;
+    min-height: 20px;
+}
+
+.p-relative {
+    display: block;
+    position: relative;
+    top: var(--padding-hero-card);
+}
+
+.icon {
+    padding-bottom: 20px;
+}
+
+.icon > i {
+    font-size: 5rem;
+}
+
+.hero-section img {
+    max-width: 15rem;
+}
+
+/* HERO SECTION MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+    .hero-section .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hero-card:first-child {
+        width: 66%;
+    }
+
+    .hero-card {
+        width: 32%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero-card:first-child{
+        display: flex;
     }
 }
