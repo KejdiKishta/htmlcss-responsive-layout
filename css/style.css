@@ -48,6 +48,10 @@ ul {
     text-align: center;
 }
 
+section {
+    padding: 4rem 0;
+}
+
 /* !HEADER */
 header {
     position: fixed;
@@ -78,7 +82,7 @@ header .container {
 
 /* FOOTER MEDIA QUERY */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
     .hamburger-menu {
         display: none;
     }
@@ -142,7 +146,7 @@ header .container {
 
 /* HERO SECTION MEDIA QUERY */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 426px) {
     .hero-section .container {
         display: flex;
         flex-wrap: wrap;
@@ -158,7 +162,7 @@ header .container {
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
     .hero-card:first-child{
         display: flex;
     }
@@ -168,7 +172,6 @@ header .container {
 
 .planning-section {
     background-color: rgb(151 146 228);
-    padding: 3rem 0;
 }
 
 .planning-section h2 {
@@ -190,7 +193,7 @@ header .container {
 
 /* MEDIA QUERY PLANNING */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
     .planning-section .container {
         display: flex;
         align-items: flex-end;
@@ -207,5 +210,60 @@ header .container {
 
     #develop h2 {
         margin-top: 10px;
+    }
+}
+
+/* *TESTIMONIAL */
+
+.testimonial-section h2 {
+    padding: 30px 0;
+}
+
+.testimonial-card {
+    background-color: rgb(151 146 228);
+    margin: 30px 0;
+    padding: 30px;
+
+    /* debug */
+    min-height: 200px;
+}
+
+.testimonial-card .photo {
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+    /* debug */
+    background-color: aqua;
+}
+
+.testimonial-card .cit {
+    background-color: blueviolet;
+    padding: 20px 0;
+}
+
+.testimonial-card .cit p {
+    margin-bottom: 20px;
+    /* debug */
+    background-color: white;
+    min-height: 30px;
+}
+
+.testimonial-card .cit h4 {
+    /* debug */
+    background-color: white;
+    min-height: 30px;
+}
+
+@media screen and (min-width: 426px) {
+    .testimonial-card {
+        display: flex;
+    }
+
+    .testimonial-card .photo {
+        width: 20%;
+    }
+
+    .testimonial-card .cit {
+        flex-grow: 1;
     }
 }
