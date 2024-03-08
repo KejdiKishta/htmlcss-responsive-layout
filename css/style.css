@@ -107,6 +107,10 @@ p {
     font-size: 3rem;
 }
 
+.f-s-25 {
+    font-size: 2.5rem;
+}
+
 /* !HEADER */
 header {
     position: fixed;
@@ -261,9 +265,6 @@ header .container {
 .testimonial-card {
     margin: 30px 0;
     padding: 30px;
-
-    /* debug */
-    min-height: 200px;
 }
 
 .testimonial-card .round-photo {
@@ -351,11 +352,63 @@ header .container {
     width: 50%;
 }
 
+.about-us p {
+    padding: 20px 0;
+}
+
+.about-us figure {
+    display: inline-block;
+    position: relative;
+}
+
+.about-us figure span {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    font-size: 4rem;
+}
+
+.about-us .round-photo {
+    width: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.about-us a {
+    display: inline-block;
+    padding: 5px 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+
 /* ?ABOUT US MEDIA QUERY */
 
 @media screen and (min-width: 768px) {
     .about-us .container {
         display: flex;
+        justify-content: space-between;
+    }
+
+    .about-us .col-left {
+        width: 60%;
+    }
+
+    .about-us .col-right {
+        width: 30%;
+    }
+
+    .about-us .col-right h2 {
+        font-size: 2rem;
+    }
+
+    .about-us .round-photo {
+        width: 100%;
+    }
+
+    .about-us figure span {
+        right: 0;
+        font-size: 3rem;
     }
 }
 
