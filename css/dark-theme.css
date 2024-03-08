@@ -1,0 +1,28 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(88 71 71);
+    }
+
+    .bg-lv {
+        background-color: rgb(54 45 45);
+    }
+
+    .bg-lb {
+        background-color: black;
+    }
+    .hero-card p {
+        color: white;
+    }
+
+    .bg-w {
+        background-color: black;
+    }
+
+    .bg-w *{
+        color: white;
+    }
+
+    footer {
+        background-color: black;
+    }
+}

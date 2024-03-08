@@ -204,6 +204,14 @@ header .container {
     .hero-card:first-child{
         display: flex;
     }
+
+    .hero-card .blue-btn {
+        padding: 10px 2rem;
+    }
+
+    .hero-section img {
+        align-self: flex-end;
+    }
 }
 
 /* *PLANNING SECTION */
