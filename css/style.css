@@ -49,12 +49,17 @@ section, footer {
 
 body {
     font-family: "PT Sans", sans-serif;
+    font-size: 1.2rem;
 }
 
 .blue-btn{
     display: inline-block;
     background-color: var(--color-blue);
     padding: 10px 4rem;
+}
+
+p {
+    line-height: 2rem;
 }
 
 /* Utilities */
@@ -95,6 +100,10 @@ body {
 
 .bg-lv {
     background-color: rgb(151 146 228);
+}
+
+.f-s-35 {
+    font-size: 3.5rem;
 }
 
 /* !HEADER */
@@ -196,19 +205,23 @@ header .container {
 /* *PLANNING SECTION */
 
 .planning-section h2 {
-    margin-top: 70px;
-
-    /* debug */
-    height: 30px;
-    background-color: red;
+    padding: 70px 0;
 }
 
 .planning-section p {
-    padding: 30px 0;
+    padding: 0 0 30px;
 }
 
 .planning-section .radius {
     padding: 20px;
+}
+
+#develop p {
+    font-style: italic;
+}
+
+.arrow {
+    font-size: 1.5rem;
 }
 
 /* ?MEDIA QUERY PLANNING */
@@ -222,6 +235,11 @@ header .container {
 
     #strategy h2 {
         margin-top: 150px;
+    }
+
+    #strategy,
+    #develop {
+        width: 50%;
     }
 
     #develop {
