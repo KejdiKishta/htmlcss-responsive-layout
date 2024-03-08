@@ -21,11 +21,18 @@ ul {
     list-style-type: none;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 /* COMMON */
 
 :root{
     --header-height: 80px;
     --padding-hero-card: 40px;
+    --color-blue: rgb(0 132 253)
 }
 
 .round-photo {
@@ -40,6 +47,15 @@ section, footer {
     padding: 4rem 0;
 }
 
+body {
+    font-family: "PT Sans", sans-serif;
+}
+
+.blue-btn{
+    display: inline-block;
+    background-color: var(--color-blue);
+    padding: 10px 4rem;
+}
 
 /* Utilities */
 
@@ -55,6 +71,10 @@ section, footer {
 
 .c-w{
     color: white;
+}
+
+.c-b {
+   color: var(--color-blue);
 }
 
 .radius{
@@ -83,7 +103,7 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: rgb(0 132 253);
+    background-color: var(--color-blue);
     width: 100%;
 }
 
@@ -122,6 +142,7 @@ header .container {
 
 .hero-section {
     padding: calc(var(--header-height) + 30px)  0;
+    font-weight: bold;
 }
 
 .hero-card {
@@ -130,42 +151,22 @@ header .container {
     padding: var(--padding-hero-card);
 }
 
-.hero-card h2 {
-
-    /* debug */
-    height: 30px;
-    background-color: red;
-}
-
 .hero-card p {
     padding: 30px 0;
-}
-
-.blue-btn{
-    display: inline-block;
-    background-color: rgb(0 132 253);
-    
-    /* debug */
-    width: 80%;
-    min-height: 20px;
+    opacity: .5;
 }
 
 .p-relative {
     display: block;
     position: relative;
     top: var(--padding-hero-card);
+    max-width: 15rem;
 }
 
 .icon {
     padding-bottom: 20px;
-}
-
-.icon > i {
+    color: var(--color-blue);
     font-size: 5rem;
-}
-
-.hero-section img {
-    max-width: 15rem;
 }
 
 /* ?HERO SECTION MEDIA QUERY */
