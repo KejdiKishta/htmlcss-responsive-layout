@@ -5,8 +5,12 @@
     box-sizing: border-box;
 }
 
-a {
+a{
     color: inherit;
+}
+
+a:not(.a-decorated) {
+    text-decoration: none;
 }
 
 img {
@@ -23,6 +27,19 @@ ul {
     --header-height: 80px;
     --padding-hero-card: 40px;
 }
+
+.round-photo {
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+    /* debug */
+    background-color: aqua;
+}
+
+section {
+    padding: 4rem 0;
+}
+
 
 /* Utilities */
 
@@ -46,10 +63,6 @@ ul {
 
 .t-align-center {
     text-align: center;
-}
-
-section {
-    padding: 4rem 0;
 }
 
 .bg-w {
@@ -155,7 +168,7 @@ header .container {
     max-width: 15rem;
 }
 
-/* HERO SECTION MEDIA QUERY */
+/* ?HERO SECTION MEDIA QUERY */
 
 @media screen and (min-width: 768px) {
     .hero-section .container {
@@ -197,7 +210,7 @@ header .container {
     padding: 20px;
 }
 
-/* MEDIA QUERY PLANNING */
+/* ?MEDIA QUERY PLANNING */
 
 @media screen and (min-width: 992px) {
     .planning-section .container {
@@ -233,12 +246,8 @@ header .container {
     min-height: 200px;
 }
 
-.testimonial-card .photo {
-    border-radius: 50%;
-    aspect-ratio: 1;
-
-    /* debug */
-    background-color: aqua;
+.testimonial-card .round-photo {
+    width: 50%;
 }
 
 .testimonial-card .cit {
@@ -246,7 +255,7 @@ header .container {
     padding: 20px 0;
 }
 
-.testimonial-card .cit p {
+.testimonial-card .cit blockquote {
     margin-bottom: 20px;
     /* debug */
     background-color: white;
@@ -259,12 +268,14 @@ header .container {
     min-height: 30px;
 }
 
+/* ?TESTIMONIAL MEDIA QUERY */
+
 @media screen and (min-width: 768px) {
     .testimonial-card {
         display: flex;
     }
 
-    .testimonial-card .photo {
+    .testimonial-card .round-photo {
         width: 20%;
     }
 
@@ -283,7 +294,7 @@ header .container {
     min-height: 400px;
 }
 
-/* BENEFITS MEDIA QUERY */
+/* ?BENEFITS MEDIA QUERY */
 
 @media screen and (min-width: 768px) {
     .benefits-section .benefit-cols {
@@ -310,3 +321,31 @@ header .container {
 }
 
 /* *ABOUT US */
+
+.about-us .round-photo {
+    width: 50%;
+}
+
+/* ?ABOUT US MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+    .about-us .container {
+        display: flex;
+    }
+}
+
+/* *GET STARTED */
+
+/* ?GET STARTED MEDIA QUERY */
+
+@media screen and (min-width: 768px) {
+    .cta .container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .cta .container {
+        width: 40%;
+    }
+}
