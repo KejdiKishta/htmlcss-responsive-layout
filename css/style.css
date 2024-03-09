@@ -138,7 +138,86 @@ header .container {
     gap: 15px;
 }
 
-/* FOOTER MEDIA QUERY */
+/* ?DARK-MODE */
+
+.toggle-btn {
+    /* pre allineare il bottone */
+    line-height: 100px;
+}
+
+header label {
+    /* altezza e larghezza bottone */
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    /* stile bottone */
+    background-color: whitesmoke;
+    border-radius: 30px;
+    cursor: pointer;
+    /* per muovere gli altri elementi all'interno */
+    position: relative;
+    transition: 0.5s;
+}
+
+header label::after {
+    /* aggiunto cerchio */
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* posizione iniziale da disattivato */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    /* colore sfumato */
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    transition: 0.5s;
+}
+
+header input {
+    /* per nascondere l'input */
+    width: 0;
+    height: 0;
+}
+
+header input:checked + label {
+    /* quando il checkbox viene attivato */
+    background-color: black;
+    border: 1px solid white;
+}
+
+header input:checked + label::after {
+    /* spostamento del cerchio quando viene attivato il checkbox */
+    left: 58px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+/* posizione icone */
+label .moon {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1;
+    font-size: .8rem;
+}
+
+/* posizione icone */
+label .sun {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    z-index: 1;
+    font-size: .8rem;
+}
+
+header input:checked + label i {
+    /* cambio colore icone quando viene attivato il checkbox */
+    color: white;
+    transition: 0.5s;
+}
+
+/* ?HEADER MEDIA QUERY */
 
 @media screen and (min-width: 992px) {
     .hamburger-menu {
